@@ -1,0 +1,10 @@
+version: '3'
+services:
+  python:
+    container_name: my-python3
+    build: ./services/python3
+    volumes:
+      - ./src:/usr/src/app
+    env_file:
+      - connection_config.env
+    tty: true
